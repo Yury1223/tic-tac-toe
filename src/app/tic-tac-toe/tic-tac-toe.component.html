@@ -1,0 +1,25 @@
+<h1>まるばつゲーム</h1>
+<div class="fields" >
+  <div class="column" *ngFor="let _column of fieldData, let cidx = index">
+    <div
+      class="row"
+      *ngFor="let _row of _column, let ridx = index"
+      (click)="onClickField(cidx, ridx)"
+    >
+      <div>{{ fieldData[cidx][ridx] }}</div>
+    </div>
+  </div>
+  <!-- <div class="column">
+    <div (click)="onClickField(1, 0)" class="row">{{ fieldData[1][0] }}</div>
+    <div (click)="onClickField(1, 1)" class="row">{{ fieldData[1][1] }}</div>
+    <div (click)="onClickField(1, 2)" class="row">{{ fieldData[1][2] }}</div>
+  </div>
+  <div class="column">
+    <div (click)="onClickField(2, 0)" class="row">{{ fieldData[2][0] }}</div>
+    <div (click)="onClickField(2, 1)" class="row">{{ fieldData[2][1] }}</div>
+    <div (click)="onClickField(2, 2)" class="row">{{ fieldData[2][2] }}</div>
+  </div> -->
+</div>
+
+
+<button (click)="onClickReset()">もう一回！</button>
