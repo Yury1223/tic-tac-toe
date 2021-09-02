@@ -92,6 +92,13 @@ export class TicTacToeComponent implements OnInit {
       return
     }
 
+    // ひきわけ
+    if (!this.fieldData.join(",").split(",").includes(" ")) {
+      window.setTimeout(() => window.alert(`ひきわけ！`), 100)
+      this.playerUserMark = ' '
+      return
+    }
+
     this.playerUserMark = this.playerUserMark === '○' ? '×' : '○'
   }
 
